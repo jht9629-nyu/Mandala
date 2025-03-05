@@ -1,7 +1,7 @@
 let refBox_init = {
   storageLabel: 'ref-manju',
   reloadLocal: 1,
-  refIndex: 17,
+  refIndex: 0,
   width: 8384,
   height: 9970,
   refs: [

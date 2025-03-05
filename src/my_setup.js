@@ -1,7 +1,7 @@
 //
 function my_setup() {
   //
-  my.version = '?v=4';
+  my.version = '?v=5';
 
   my.defaultZ = 5;
   my.focus_animated_cut_time = 10;
@@ -13,8 +13,8 @@ function my_setup() {
   // let bottomMargin = 0;
   let bottomMargin = 90;
 
-  // my.canvas = createCanvas(windowWidth, windowHeight - bottomMargin);
-  my.canvas = createCanvas(1920, 1080);
+  my.canvas = createCanvas(windowWidth, windowHeight - bottomMargin);
+  // my.canvas = createCanvas(1920, 1080);
   // my.canvas = createCanvas(960, 540);
   my.canvas.mousePressed(canvas_mousePressed);
   my.canvas.mouseReleased(canvas_mouseReleased);
@@ -26,6 +26,7 @@ function my_setup() {
   my.scanFlag = 0;
 
   my.refBox = new RefBox(refBox_init);
+  my.refBox.mapToImage(my.backImage);
 
   create_panes();
 
@@ -37,7 +38,7 @@ function my_setup() {
 
   my.cycleCount = 1;
 
-  setup_dbase();
+  // setup_dbase();
 }
 
 // !!@ hard to resize since Panes depend on canvas size at init

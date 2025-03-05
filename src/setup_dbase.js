@@ -33,3 +33,17 @@ async function setup_dbase() {
 }
 
 //   dbase_issue_action('action_rewind', 'item');
+
+function ui_log(...args) {
+  console.log(...args);
+  let str = args.join(' ') + '<br/>';
+  if (globalThis.id_console_ul) {
+    id_console_ul.innerHTML += str;
+  }
+}
+globalThis.ui_log = ui_log;
+
+function ui_verbose(...args) {
+  // console.log(...args);
+}
+globalThis.ui_verbose = ui_verbose;
