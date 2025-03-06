@@ -1,5 +1,6 @@
 //
-function canvas_mousePressed() {
+// function canvas_mousePressed() {
+function mousePressed() {
   console.log('canvas_mousePressed');
 
   if (keyIsDown(SHIFT)) {
@@ -16,7 +17,19 @@ function canvas_mousePressed() {
   my.pane.mousePressed();
 }
 
-function canvas_mouseReleased() {
+function mouseDragged() {
+  let inX = mouseX >= 0 && mouseX < width;
+  let inY = mouseY >= 0 && mouseY < height;
+  let onCanvas = inX && inY;
+  if (onCanvas) {
+    my.pane.mouseDragged();
+  }
+  // return false to allow scrolling on mobile
+  return !onCanvas;
+}
+
+// function canvas_mouseReleased() {
+function mouseReleased() {
   // console.log('canvas_mouseReleased');
   if (my.shiftTracking) {
     saveMouseXY();

@@ -9,7 +9,7 @@ let my = {};
 
 function preload() {
   //
-  my.version = '?v=6';
+  my.version = '?v=7';
 
   let path = 'https://molab-itp.github.io/p5moLibrary/src/assets/';
   // on mobile device, switch to lower rez graphics
@@ -45,9 +45,9 @@ function draw() {
   my.pane1.render();
   my.pane0.render();
   ui_init_update();
-  if (my.mouseTracking) {
-    my.pane.mouseDragged();
-  }
+  // if (my.mouseTracking) {
+  //   my.pane.mouseDragged();
+  // }
   draw_crossHairs();
   drawCycleCount();
 

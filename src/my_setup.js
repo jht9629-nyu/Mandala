@@ -1,7 +1,7 @@
 //
 function my_setup() {
   //
-  my.version = '?v=6';
+  my.version = '?v=7';
 
   my.defaultZ = 5;
   my.focus_animated_cut_time = 10;
@@ -16,8 +16,8 @@ function my_setup() {
   my.canvas = createCanvas(windowWidth, windowHeight - bottomMargin);
   // my.canvas = createCanvas(1920, 1080);
   // my.canvas = createCanvas(960, 540);
-  my.canvas.mousePressed(canvas_mousePressed);
-  my.canvas.mouseReleased(canvas_mouseReleased);
+  // my.canvas.mousePressed(canvas_mousePressed);
+  // my.canvas.mouseReleased(canvas_mouseReleased);
   my.width = width;
   my.height = height;
   my.paneRatio = 12 / 16;
