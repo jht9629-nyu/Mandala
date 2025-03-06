@@ -1,7 +1,7 @@
 //
 function my_setup() {
   //
-  my.version = '?v=8';
+  my.version = '?v=9';
 
   my.defaultZ = 5;
   my.focus_animated_cut_time = 10;
@@ -13,7 +13,7 @@ function my_setup() {
   // let bottomMargin = 0;
   let bottomMargin = 90;
   if (my.mobileScreen) {
-    bottomMargin = 200;
+    bottomMargin = 120;
   }
   my.canvas = createCanvas(windowWidth, windowHeight - bottomMargin);
   // my.canvas = createCanvas(1920, 1080);
