@@ -5,3 +5,12 @@
 ## [pages](https://jht9629-nyu.github.io/Mandala/src/)
 
 - ?v=6
+
+````
+
+
+nlib -> ../../../2024-moSalon/moLib/src/lib
+
+
+```
+````
