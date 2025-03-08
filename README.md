@@ -4,7 +4,7 @@
 
 ## [pages](https://jht9629-nyu.github.io/Mandala/src/)
 
-- ?v=11
+- ?v=12
 
 ```
 #

@@ -9,7 +9,7 @@ let my = {};
 
 function preload() {
   //
-  my.version = '?v=11';
+  my.version = '?v=12';
 
   let path = 'https://molab-itp.github.io/p5moLibrary/src/assets/';
   // on mobile device, switch to lower rez graphics
@@ -45,8 +45,8 @@ function draw() {
   //
   // background(0);
   draw_backImage();
-  if (my.pane1) my.pane1.render();
-  my.pane0.render();
+  my.pane1?.render();
+  my.pane0?.render();
   ui_init_update();
   // if (my.mouseTracking) {
   //   my.pane.mouseDragged();
@@ -76,7 +76,7 @@ function draw_backImage() {
 
 function drawCycleCount() {
   let lapse = my.animLoop.lapse();
-  let { x0, y0, width, height } = my.pane0;
+  let { x0, y0, width, height } = my.bottomPane;
   let h = floor(height * 0.025);
   let y = y0 + height - h;
   let x = x0;
