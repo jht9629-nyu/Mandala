@@ -131,17 +131,17 @@ function run_action() {
 function focusAction() {
   clearMouseXY();
   if (my.scanFlag) {
-    my.pane1.focus_animated_cut(my.focus_animated_cut_time);
+    if (my.pane1) my.pane1.focus_animated_cut(my.focus_animated_cut_time);
     my.pane0.focus_animated_cut(my.focus_animated_cut_time);
   } else {
-    my.pane1.focus();
+    if (my.pane1) my.pane1.focus();
     my.pane0.focus();
   }
 }
 
 function updateAction() {
   my.pane0.updateRefEntry(my.mouseXYs);
-  my.pane1.copyRefEntry(0, { z: my.defaultZ });
+  if (my.pane1) my.pane1.copyRefEntry(0, { z: my.defaultZ });
   ui_paneUpdate();
 }
 
@@ -188,7 +188,7 @@ function refIndexSync() {
   my.refIndex_input.value(my.refBox.refIndex + 1);
   my.refLabel_input.value(my.refBox.refLabel);
   ui_paneUpdate();
-  if (my.pane0.region().z && my.pane1.region().z) {
+  if (my.pane0.region().z && my.pane1 && my.pane1.region().z) {
     focusAction();
   }
 }

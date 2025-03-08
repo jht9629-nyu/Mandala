@@ -17,6 +17,8 @@ function preload() {
     path = 'https://molab-itp.github.io/p5moLibrary/src/assets-lowrez/';
     my.mobileScreen = 1;
   }
+  // my.mobileScreen = 1;
+
   // path = 'https://molab-itp.github.io/p5moLibrary/src/assets-lowrez/';
   console.log('path', path);
 
@@ -43,7 +45,7 @@ function draw() {
   //
   // background(0);
   draw_backImage();
-  my.pane1.render();
+  if (my.pane1) my.pane1.render();
   my.pane0.render();
   ui_init_update();
   // if (my.mouseTracking) {

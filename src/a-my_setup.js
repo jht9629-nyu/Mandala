@@ -10,12 +10,8 @@ function my_setup() {
   my.primaryPortion = 0.75;
   // my.primaryPortion = 0.5;
   // my.primaryPortion = 0.333;
-  // let bottomMargin = 0;
-  let bottomMargin = 90;
-  if (my.mobileScreen) {
-    bottomMargin = 120;
-  }
-  my.canvas = createCanvas(windowWidth, windowHeight - bottomMargin);
+  my.bottomMargin = 40;
+  my.canvas = createCanvas(windowWidth, windowHeight - my.bottomMargin);
   // my.canvas = createCanvas(1920, 1080);
   // my.canvas = createCanvas(960, 540);
   // my.canvas.mousePressed(canvas_mousePressed);
@@ -31,8 +27,6 @@ function my_setup() {
   my.refBox.mapToImage(my.backImage);
 
   create_panes();
-
-  my.pane = my.pane1;
 
   create_ui();
 

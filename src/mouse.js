@@ -10,7 +10,7 @@ function mousePressed() {
   }
   if (my.pane0.touchPoint(mouseX, mouseY)) {
     setPane(my.pane0);
-  } else if (my.pane1.touchPoint(mouseX, mouseY)) {
+  } else if (my.pane1 && my.pane1.touchPoint(mouseX, mouseY)) {
     setPane(my.pane1);
   }
   my.pane.mousePressed();
