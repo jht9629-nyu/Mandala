@@ -4,13 +4,17 @@
 
 ## [pages](https://jht9629-nyu.github.io/Mandala/src/)
 
-- ?v=6
-
-````
-
-
-nlib -> ../../../2024-moSalon/moLib/src/lib
-
+- ?v=9
 
 ```
-````
+#
+# symbolic links fail in github pages
+# need to exclude in .gitignore
+
+.gitignore
+src/nlib
+
+nlib -> ../../../2024-moSalon/moLib/src/lib
+ln -s ../../../2024-moSalon/moLib/src/lib nlib
+
+```

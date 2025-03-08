@@ -13,7 +13,7 @@ function create_ui() {
 
   let href =
     'https://en.wikipedia.org/wiki/Mandala#/media/File:Manjuvajramandala_con_43_divinit%C3%A0_-_Unknown_-_Google_Cultural_Institute.jpg';
-  createA(href, 'Thangka painting of Manjuvajra mandala', '_blank');
+  createA(href, 'Thangka Manjuvajra Mandala', '_blank');
 
   createElement('br');
   my.scanFlagChk = createCheckbox('run', my.scanFlag).changed(function () {
