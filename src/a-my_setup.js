@@ -21,7 +21,7 @@ function my_setup() {
   my.paneRatio = 12 / 16;
   // my.isPortrait = height > width;
   my.isPortrait = 1;
-  my.scanFlag = 0;
+  my.scanFlag = 1;
 
   my.refBox = new RefBox(refBox_init);
   my.refBox.mapToImage(my.backImage);
